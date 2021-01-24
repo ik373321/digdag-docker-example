@@ -1,6 +1,7 @@
 FROM python:3.7-stretch
 
-RUN apt update && apt install -y default-jre
+RUN apt-get update && apt-get install -y default-jre && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ENV DIGDAG_VERSION 0.9.42
 RUN curl -o /usr/local/bin/digdag --create-dirs -L "https://dl.digdag.io/digdag-${DIGDAG_VERSION}" && \
