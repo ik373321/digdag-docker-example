@@ -7,6 +7,7 @@ RUN curl -o /usr/local/bin/digdag --create-dirs -L "https://dl.digdag.io/digdag-
     chmod +x /usr/local/bin/digdag
 
 WORKDIR /work
+COPY workflows workflows
 
 EXPOSE 65432
 
