@@ -10,6 +10,9 @@ RUN curl -o /usr/local/bin/digdag --create-dirs -L "https://dl.digdag.io/digdag-
 WORKDIR /work
 COPY workflows workflows
 
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
 EXPOSE 65432
 
 ENTRYPOINT ["java", "-jar", "/usr/local/bin/digdag"]
