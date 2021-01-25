@@ -16,4 +16,3 @@ RUN pip install -r requirements.txt
 EXPOSE 65432
 
 ENTRYPOINT ["java", "-jar", "/usr/local/bin/digdag"]
-CMD ["server", "-m", "-b", "0.0.0.0"]

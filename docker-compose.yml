@@ -8,3 +8,19 @@ services:
       - 65432:65432
     volumes:
       - .:/work
+      - .docker:/opt/etc/digdag
+    command: ["server", "-c", "/opt/etc/digdag/server.properties"]
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:13.1-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: digdag
+      POSTGRES_USER: digdag
+      POSTGRES_PASSWORD: digdag
+    volumes:
+      - postgres-volume:/var/lib/postgresql/data
+volumes:
+  postgres-volume:
