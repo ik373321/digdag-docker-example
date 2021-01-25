@@ -8,13 +8,3 @@ services:
       - 65432:65432
     volumes:
       - .:/work
-    depends_on:
-      - postgres
-  postgres:
-    image: postgres:13.1-alpine
-    ports:
-      - 5432:5432
-    environment:
-      POSTGRES_DB: digdag
-      POSTGRES_USER: digdag
-      POSTGRES_PASSWORD: digdag

@@ -3,10 +3,15 @@ This is a sample of digdag running on Azure Container Instances.
 
 ## build
 ```
-$ docker compose build
+$ docker-compose build
+```
+
+## Runs workflow
+```
+$ docker-compose run --rm digdag run --project workflows workflows.dig
 ```
 
 ## Runs server mode
 ```shell
-$ docker compsoe up
+$ docker-compsoe up
 ```
