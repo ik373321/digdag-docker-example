@@ -1,5 +1,5 @@
-# [WIP] aci-digdag-example
-This is a sample of digdag running on Azure Container Instances.
+# digdag-docker-example
+This is a sample of digdag running on Docker Compose.
 
 ## Usage
 
@@ -10,7 +10,7 @@ $ docker-compose build
 
 ### runs workflow
 ```
-$ docker-compose run --rm digdag run --project workflows workflows.dig
+$ docker-compose run --rm digdag run --project sample sample.dig
 ```
 
 ### runs server mode
