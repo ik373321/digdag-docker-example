@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   digdag:
+    container_name: digdag
     build: .
     tty: true
     ports:
