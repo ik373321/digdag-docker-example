@@ -24,3 +24,5 @@ operate server
 $ docker exec -it digdag bash
 root@81c520f98f29:/work#
 ```
+
+digdag run  mydag.dig --rerun
